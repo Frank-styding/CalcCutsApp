@@ -96,7 +96,9 @@ socket.addEventListener("open", function (event) {
 });
 
 socket.addEventListener("message", function (event) {
-  console.log(JSON.parse(event.data));
+  let div = document.createElement("div");
+  div.innerHTML = event.data;
+  document.body.appendChild(div);
 });
 
 const contactServer = () => {
@@ -112,3 +114,6 @@ const contactServer = () => {
 document.getElementById("btn").onclick = () => {
   contactServer();
 };
+
+import { message } from "./message.js";
+console.log(message);
