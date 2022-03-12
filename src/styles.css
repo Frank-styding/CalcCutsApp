@@ -1,0 +1,9 @@
+/* styles.css */
+
+/* Add styles here to customize the appearance of your app */
+
+body{
+    margin: 0;
+    padding:0;
+    display: flex;
+}
